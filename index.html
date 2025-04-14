@@ -671,6 +671,34 @@
       <input type="text" id="input57">
       <button type="button" id="button57">Clique aqui</button>
     </form>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="container">
+    <h2>atividade 58</h2>
+    <p>esconda e exiba um texto ao clicar num botao</p>
+    <p id="p58">Unicesumar-PR</p>
+    <button id="button58">Clique aqui</button>
+  </div>
+  
+  <div class="line"></div>
+
+  <div class="container">
+    <h2>atividade 59</h2>
+    <p>altere a imagem ao passar o mouse sobre ele</p>
+    <img src="imgs/img.webp" alt="imagem unicesumar" id="img59">
+  </div>
+
+  <div class="line"></div>
+
+  <div class="container">
+    <h2>atividade 60</h2>
+    <p>faça um script que mude o tema da pagina ao clicar em um botao</p>
+    <form>
+      <input type="text" placeholder="digite a cor" id="input60">
+      <button id="button60" type="button">Mudar o tema do site</button>
+    </form>
 
   </div>
 
@@ -959,8 +987,35 @@
     var btn57 = document.getElementById("button57")
     var num=0;
     btn57.addEventListener("click",function(){
-      document.getElementById("input57").innerHTML = `${num+1}`
+      num++;
+      document.getElementById("input57").value = `${num}`
     })
+
+    //Atv58
+    var btn58 = document.getElementById("button58")
+    var p = document.getElementById("p58")
+
+    btn58.addEventListener("click",function(){
+      p.style.display="none"
+    })
+    
+    //Atv59
+    var img = document.getElementById("img59")
+
+    img.addEventListener("mouseover",function(){
+      img.src="imgs/img2.webp"
+    })
+
+    //Atv60
+    var btn60 = document.getElementById("button60")
+
+    btn60.addEventListener("click",function() {
+    var inp60 = document.getElementById("input60").value
+      document.body.style.backgroundColor=`${inp60}`
+
+    })
+   
+
     
 
 
